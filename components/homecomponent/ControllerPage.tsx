@@ -22,9 +22,9 @@ const HeroSection: React.FC = () => {
       </p>
 
 
-      <h1 className="font-inter font-medium text-[44px] md:text-[64px] leading-[70px] 
+      <h1 className="font-inter font-medium text-[44px] md:text-[64px] leading-[55px] md:leading-[70px]
              tracking-[-3px] text-center align-middle">
-        Introducing <br /> Home Controller
+        Introducing <br className="leading-relaxed"/> Home Controller
       </h1>
       <p
         className="font-inter font-medium text-[12px] md:text-[13.89px] leading-[19px] 

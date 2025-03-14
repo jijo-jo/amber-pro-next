@@ -12,7 +12,7 @@ const images = [Iphone1, Iphone2, Iphone3, Iphone4];
 const SmartDashboard: React.FC = () => {
   return (
     <div className="bg-black text-white min-h-screen flex flex-col px-2 py-12 w-full overflow-hidden">
-      <div className="w-full max-w-6xl text-left">
+      <div className="w-full text-left">
         <h2 className="font-inter font-medium text-[44px] md:text-[64px] leading-[57.2px] tracking-[-2px] align-middle pl-8 md:pl-[77px]">
           Control your home, anytime, anywhere.
         </h2>
