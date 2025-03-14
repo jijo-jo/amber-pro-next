@@ -14,7 +14,7 @@ const HeroSection: React.FC = () => {
            Experience the perfect blend of elegance and technology with AMBER PRO touch panels. Control lighting, climate, security, and more, all at your fingertips.
       </p>
 
-      <div className="mt-6 flex flex-col sm:flex-col space-y-4 sm:space-y-0 sm:space-x-4 max-w-xs sm:max-w-none">
+      <div className="mt-6 flex flex-col sm:flex-col space-y-4 sm:space-y-0 sm:space-x-4 max-w-xs sm:max-w-none ml-0 md:ml-8">
         <Button
           title="Buy now"
           onClick={() => alert("Buy Now Clicked")}
