@@ -18,8 +18,8 @@ const HeroSection: React.FC = () => {
         <Button
           title="Buy now"
           onClick={() => alert("Buy Now Clicked")}
-          className="bg-white text-[#000000] py-[9px] px-[18px] hover:bg-gray-200 w-full sm:w-auto 
-             text-[15.88px] leading-[100%] tracking-[0%] 
+          className="bg-white text-[#000000] py-[9px] px-[18px] hover:bg-gray-200 w-full md:w-[112.5px]
+             text-[15.88px] leading-[100%] tracking-[0%] h-[42px]
              text-center align-middle font-inter font-medium"
         />
 

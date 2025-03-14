@@ -10,7 +10,7 @@ interface ButtonProps {
 const Button: React.FC<ButtonProps> = ({ title, onClick, className }) => {
   return (
     <button
-      className={`w-full sm:w-auto rounded-[52px] font-medium transition 
+      className={`rounded-[52px] font-medium transition 
                   active:scale-95 
                   disabled:bg-gray-400 disabled:cursor-not-allowed 
                   ${className}`}

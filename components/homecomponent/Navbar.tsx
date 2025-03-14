@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
               title="Buy now"
               onClick={() => alert("Buy Now Clicked")}
               className="bg-[#00B7E1] text-white 
-               px-[10px] py-[5px] 
+                h-[35px] w-[97px]
                font-inter font-medium text-[15.88px] leading-[100%] 
                tracking-[0%] text-center align-middle"
             />
