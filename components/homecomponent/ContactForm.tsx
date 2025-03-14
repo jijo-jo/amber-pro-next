@@ -74,18 +74,17 @@ const ContactForm: React.FC = () => {
 
   return (
     <div className="bg-black text-white px-6 py-12 sm:px-16 lg:px-32">
-      <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 md:bg-[#161616] md:rounded-[22px] md:p-14">
         <div>
           <h2
-            className="font-inter font-medium text-[44px] leading-[57.2px] 
-             "
+            className="font-inter font-medium text-[44px] leading-[57.2px] tracking-[-2px]"
           >
             Let’s Connect
           </h2>
 
           <p
             className="font-inter font-medium text-[21px] leading-[29px]
-             align-middle text-[#757575] mt-4"
+             align-middle text-[#757575] tracking-[-2px] mt-4"
           >
             Have questions about making your home smarter, safer, and more efficient? We&apos;re here to help!
             Whether you&apos;re looking for personalized automation solutions, expert advice, or product details,
@@ -100,7 +99,7 @@ const ContactForm: React.FC = () => {
           </p>
 
         </div>
-        <form className="grid grid-cols-1 sm:grid-cols-2 gap-4" onSubmit={handleSubmit}>
+        <form className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:mt-20" onSubmit={handleSubmit}>
           <InputField name="firstName" placeholder="First Name *" required value={formData.firstName} onChange={handleChange} />
           {errors.firstName && <p className="text-red-500 text-sm">{errors.firstName}</p>}
 
@@ -133,7 +132,7 @@ const ContactForm: React.FC = () => {
               placeholder="Hello, I am a...*"
               value={formData.message}
               onChange={handleChange}
-              className="w-full p-2 border border-gray-500 bg-gray-200 text-black focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder:text-[#000000]"
+              className="w-full px-4 py-3 md:py-2 border border-gray-500 bg-[#D9D9D9] text-black focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder:text-[#000000] placeholder:opacity-50"
             ></textarea>
             {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
           </div>
