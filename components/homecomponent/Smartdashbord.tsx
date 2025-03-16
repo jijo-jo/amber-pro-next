@@ -2,26 +2,26 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import Iphone1 from '../assests/image1.png';
-import Iphone2 from '../assests/image2.png';
-import Iphone3 from '../assests/image3.png';
-import Iphone4 from '../assests/image4.png';
+import Iphone1 from '../assests/Home Page.png';
+import Iphone2 from '../assests/Scenes list.png';
+import Iphone3 from '../assests/Master Bedroom.png';
+import Iphone4 from '../assests/RGB Lights.png';
 
 const images = [Iphone1, Iphone2, Iphone3, Iphone4];
 
 const SmartDashboard: React.FC = () => {
   return (
     <div className="bg-black text-white min-h-screen flex flex-col px-2 py-12 w-full overflow-hidden">
-      <div className="w-full text-left">
-        <h2 className="font-inter font-medium text-[44px] md:text-[64px] leading-[57.2px] tracking-[-2px] align-middle pl-8 md:pl-[77px]">
+      <div className="w-full text-left md:mt-16">
+        <h2 className="font-inter font-medium text-[44px] md:text-[64px] leading-[57.2px] tracking-[-2px] align-middle text-center">
           Control your home, anytime, anywhere.
         </h2>
       </div>
 
       {/* Image Gallery Section */}
-      <div className="relative mt-10 w-full max-w-7xl flex items-center justify-center">
+      <div className="relative mt-10 md:mt-20 w-full flex items-center justify-center">
         <div
-          className="flex md:grid md:grid-cols-4 gap-4 md:gap-2 overflow-x-auto md:overflow-hidden scroll-smooth no-scrollbar"
+          className="flex md:grid md:grid-cols-4 gap-10 md:gap-12 md:justify-between overflow-x-auto md:overflow-hidden scroll-smooth no-scrollbar"
           style={{
             scrollSnapType: 'x mandatory',
           }}
@@ -29,7 +29,7 @@ const SmartDashboard: React.FC = () => {
           {images.map((src, index) => (
             <div
               key={index}
-              className="w-[320px] h-[420px] md:w-[400px] md:h-[500px] flex-shrink-0"
+              className="flex-shrink-0"
               style={{ scrollSnapAlign: 'start' }}
             >
               <Image
@@ -50,7 +50,7 @@ const SmartDashboard: React.FC = () => {
 
 const DownloadSection: React.FC = () => {
   return (
-    <div className="text-center text-[#757575] px-6 mt-16 max-w-3xl mx-auto">
+    <div className="text-center text-[#757575] px-6 mt-16 w-[777px] max-w-4xl mx-auto">
       <p className="font-inter font-medium text-[21px] leading-[29px] tracking-[-2px] text-center align-middle">
         The Curiousfly App is your ultimate smart home companion, providing seamless control over
         lighting, climate, security, entertainment, and energy management -{' '}

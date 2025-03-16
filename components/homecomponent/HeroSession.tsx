@@ -4,7 +4,7 @@ import Button from "../globalcomponents/Button";
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="flex flex-col items-center justify-end min-h-screen bg-black text-white text-center px-6 py-12 pb-24">
+    <section className="flex flex-col items-center justify-end min-h-screen bg-black text-white text-center px-6 py-12 pb-24 mt-8">
       <h1 className="text-[36px] md:text-[44px] font-medium bg-gradient-to-r from-[#4D4D4D] to-[#FFFFFF] text-transparent bg-clip-text leading-[57.2px] 
              tracking-[-2px]">
         The Amber Pro
@@ -20,7 +20,7 @@ const HeroSection: React.FC = () => {
           onClick={() => alert("Buy Now Clicked")}
           className="bg-white text-[#000000] py-[9px] px-[18px] hover:bg-gray-200 w-full md:w-[112.5px]
              text-[15.88px] leading-[100%] tracking-[0%] h-[42px]
-             text-center align-middle font-inter font-medium"
+             text-center align-middle font-inter font-medium ml-2"
         />
 
         <Button

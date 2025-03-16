@@ -91,7 +91,7 @@ const ContactForm: React.FC = () => {
             our team at
             <span
               className="font-inter text-[21px] leading-[29px]
-               font-bold text-[#FFFFFF] px-2"
+               font-medium text-[#FFFFFF] px-2"
             >
               Curiousfly is ready to assist you.
             </span>

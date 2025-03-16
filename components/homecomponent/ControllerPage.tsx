@@ -12,13 +12,13 @@ const ControllerPage: React.FC = () => {
 
 const HeroSection: React.FC = () => {
   return (
-    <div className="text-center px-6 py-6 md:py-10 flex flex-col items-center">
+    <div className="text-center px-6 py-6 md:py-10 mt-8 md:mt-16 flex flex-col items-center">
       <p
         className="font-inter font-medium text-[12px] md:text-[16px] leading-[19.2px] 
              tracking-[1.92px] text-center align-middle 
              text-gray-700 uppercase mt-4 md:mt-8"
       >
-        Curiouslyfly
+        Curiousfly
       </p>
 
 
