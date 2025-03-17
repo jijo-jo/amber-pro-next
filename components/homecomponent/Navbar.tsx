@@ -26,7 +26,7 @@ const Navbar: React.FC = () => {
             <Image src={Logo} alt="Logo" className="h-[26px] w-[25px]" />
           </div>
 
-          <div className="hidden md:flex flex-1 justify-center space-x-6">
+          <div className="hidden md:flex flex-1 justify-center space-x-4 gap-12 ml-20 ">
             <NavLink label="Amber Pro" href="#" />
             <NavLink label="Curiousfly Home" href="#" />
             <NavLink label="Home Controller" href="#" />
