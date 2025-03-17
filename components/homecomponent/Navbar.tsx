@@ -59,7 +59,7 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Popup Menu */}
       <div
-        className={`fixed top-[87.63px] left-[24px] w-[345px] h-[552.25px]  max-w-[90%] bg-[#191919] z-50 
+        className={`fixed top-[87.63px] left-[6%] w-[345px] h-[552.25px]  max-w-[90%] bg-[#191919] z-50 
         transition-transform duration-300 ${isOpen ? "translate-x-0" : "hidden"}`}
       >
         <div className="absolute top-4 right-4">
