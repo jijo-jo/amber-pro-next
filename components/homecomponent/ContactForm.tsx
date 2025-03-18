@@ -80,21 +80,20 @@ const ContactForm: React.FC = () => {
     <div ref={sectionRef} className="bg-black text-white px-6 py-12 sm:px-16 lg:px-32">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 md:bg-[#161616] md:rounded-[22px] md:p-14">
         <div>
-          <h2
-            className="font-inter font-medium text-[44px] leading-[57.2px] tracking-[-2px]"
-          >
+          <h2 className="font-inter font-medium text-[44px] leading-[57.2px] tracking-[-2px]">
             {headingWords.map((word, index) => (
               <motion.span
                 key={index}
-                initial={{ opacity: 0, y: 10 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+                initial={{ opacity: 0, y: 10, color: '#000000' }}
+                animate={isInView ? { opacity: 1, y: 0, color: '#FFFFFF' } : { opacity: 0, y: 10, color: '#000000' }}
                 transition={{
-                  duration: 0.3,
+                  duration: 0.8,
                   ease: "easeOut",
-                  delay: isInView ? index * 0.8 : 0,
+                  delay: isInView ? index * 0.2 : 0,
                 }}
+                className="inline-block mr-3"
               >
-                {word}{" "}
+                {word}
               </motion.span>
             ))}
           </h2>

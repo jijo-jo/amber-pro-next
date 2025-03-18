@@ -21,16 +21,17 @@ const SmartDashboard: React.FC = () => {
         <h2 className="font-inter font-medium text-[44px] md:text-[64px] leading-[57.2px] tracking-[-2px] align-middle pl-7 md:pl-[77px]">
           {headingWords.map((word, index) => (
             <motion.span
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{
-                duration: 0.8,
-                ease: 'easeOut',
-                delay: isInView ? index * 0.2 : 0,
-              }}
+            key={index}
+            initial={{ opacity: 0, y: 10, color: '#000000' }}
+            animate={isInView ? { opacity: 1, y: 0, color: '#FFFFFF' } : { opacity: 0, y: 10, color: '#000000' }}
+            transition={{
+              duration: 0.8,
+              ease: "easeOut",
+              delay: isInView ? index * 0.2 : 0,
+            }}
+            className="inline-block mr-3"
             >
-              {word}{' '}
+              {word}
             </motion.span>
           ))}
         </h2>
