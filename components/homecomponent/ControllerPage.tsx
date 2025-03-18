@@ -62,7 +62,7 @@ const HeroSection: React.FC = () => {
 
       <motion.p
         initial={{ opacity: 0, y: 15 }}
-        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
+        animate={isInView ? { opacity: 0.5, y: 0 } : { opacity: 0, y: 15 }}
         transition={{
           duration: 1.4,
           ease: "easeOut",

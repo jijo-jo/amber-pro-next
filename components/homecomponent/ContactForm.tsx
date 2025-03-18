@@ -78,7 +78,7 @@ const ContactForm: React.FC = () => {
 
   return (
     <div ref={sectionRef} className="bg-black text-white px-6 py-12 sm:px-16 lg:px-32">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-14 md:bg-[#161616] md:rounded-[22px] md:p-14">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 md:bg-[#161616] md:rounded-[22px] md:p-14">
         <div>
           <h2
             className="font-inter font-medium text-[44px] leading-[57.2px] tracking-[-2px]"
@@ -101,7 +101,7 @@ const ContactForm: React.FC = () => {
 
           <p
             className="font-inter font-medium text-[21px] leading-[29px]
-             align-middle text-[#757575] tracking-[-2px] mt-4"
+             align-middle text-[#757575] tracking-[-2px] mt-4 md:text-justify"
           >
             Have questions about making your home smarter, safer, and more efficient? We&apos;re here to help!
             Whether you&apos;re looking for personalized automation solutions, expert advice, or product details,

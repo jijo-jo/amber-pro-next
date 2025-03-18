@@ -38,7 +38,7 @@ const SmartDashboard: React.FC = () => {
 
       <div className="relative mt-14 md:mt-24 flex pl-7 md:pl-[77px]">
         <div
-          className="flex flex-row md:gap-10 md:justify-between overflow-x-auto scroll-smooth no-scrollbar"
+          className="flex flex-row gap-4 md:gap-10 md:justify-between overflow-x-auto scroll-smooth no-scrollbar"
           style={{
             scrollSnapType: 'x mandatory',
           }}
@@ -52,16 +52,16 @@ const SmartDashboard: React.FC = () => {
               <Image
                 src={src}
                 alt={`Smart Home Dashboard ${index + 1}`}
-                className="w-[197px] md:w-[385px] h-[408px] md:h-full rounded-xl shadow-lg object-cover"
-                width={415}
-                height={816}
+                className="w-[175px] md:w-[350px] rounded-xl shadow-lg object-cover"
+                width={350}
+                height={950}
               />
             </div>
           ))}
         </div>
       </div>
 
-      <div className="flex justify-center mt-24">
+      <div className="flex justify-center md:mt-20">
         <DownloadSection isInView={isInView} headingWordsLength={headingWords.length} />
       </div>
     </div>
