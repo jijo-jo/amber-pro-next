@@ -32,22 +32,24 @@ const OfficeSession: React.FC<HeroProps> = ({
           priority
         />
         <div className="absolute top-8 left-4 lg:top-auto lg:left-auto lg:bottom-32 lg:right-[162px] max-w-md p-4 sm:p-8 text-left ">
-          <h1 className="font-inter font-medium text-[36px] md:text-[44px] leading-[57.2px] tracking-[0%] text-[#000000]">
+          <h1 className="font-inter font-medium text-[36px] md:text-[44px] leading-[57.2px] tracking-[0%]">
             {headingWords.map((word, index) => (
               <motion.span
                 key={index}
-                initial={{ opacity: 0, y: 10 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+                initial={{ opacity: 0, y: 10, color: "transparent" }}
+                animate={isInView ? { opacity: 1, y: 0, color: "#000000" } : { opacity: 0, y: 10, color: "transparent" }}
                 transition={{
-                  duration: 0.3,
+                  duration: 0.8,
                   ease: "easeOut",
-                  delay: isInView ? index * 0.8 : 0,
+                  delay: isInView ? index * 0.4 : 0,
                 }}
+                className="inline-block mr-3"
               >
-                {word}{" "}
+                {word}
               </motion.span>
             ))}
           </h1>
+
           <motion.p
             initial={{ opacity: 0, y: 15 }}
             animate={isInView ? { opacity: 0.5, y: 0 } : { opacity: 0, y: 15 }}

@@ -29,36 +29,44 @@ const HeroSection: React.FC = () => {
       </p>
 
       <h1 className="font-inter font-medium text-[44px] md:text-[64px] leading-[55px] md:leading-[70px] tracking-[-3px] text-center align-middle">
+        {/* First Line Animation */}
         {headingWordsLine1.map((word, index) => (
           <motion.span
             key={index}
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 10, color: "transparent" }}
+            animate={isInView ? { opacity: 1, y: 0, color: "#000000" } : { opacity: 0, y: 10, color: "transparent" }}
             transition={{
-              duration: 0.8,
+              duration: 1,
               ease: "easeOut",
-              delay: isInView ? index * 0.2 : 0,
+              delay: isInView ? index * 0.4 : 0,
             }}
+            className="inline-block mr-3"
           >
             {word}{" "}
           </motion.span>
         ))}
+
         <br className="leading-relaxed" />
+
+        {/* Second Line Animation (Starts after first line finishes) */}
         {headingWordsLine2.map((word, index) => (
           <motion.span
             key={index}
-            initial={{ opacity: 0, y: 10 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+            initial={{ opacity: 0, y: 10, color: "transparent" }}
+            animate={isInView ? { opacity: 1, y: 0, color: "#000000" } : { opacity: 0, y: 10, color: "transparent" }}
             transition={{
-              duration: 0.3,
+              duration: 1,
               ease: "easeOut",
-              delay: isInView ? (headingWordsLine1.length + index) * 0.8 : 0,
+              delay: isInView ? (headingWordsLine1.length * 0.4) + (index * 0.4) : 0,
             }}
+            className="inline-block mr-3"
           >
             {word}{" "}
           </motion.span>
         ))}
       </h1>
+
+
 
       <motion.p
         initial={{ opacity: 0, y: 15 }}

@@ -13,21 +13,20 @@ const HeroSection: React.FC = () => {
       ref={sectionRef}
       className="flex flex-col items-center justify-end min-h-screen bg-black text-white text-center px-6 py-12 pb-24 mt-8"
     >
-      <h1 className="text-[36px] md:text-[44px] font-medium bg-gradient-to-r from-[#4D4D4D] to-[#FFFFFF] text-transparent bg-clip-text leading-[57.2px] tracking-[-2px]">
-        {headingWords.map((word, index) => (
-          <motion.span
-            key={index}
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{
-              duration: 0.3,
-              ease: "easeOut",
-              delay: isInView ? index * 0.8 : 0,
-            }}
-          >
-            {word}{" "}
-          </motion.span>
-        ))}
+      <h1 className="text-[36px] md:text-[44px] font-medium leading-[57.2px] tracking-[-2px]">
+        <motion.span
+          initial={{ opacity: 0, y: 10, color: '#000000' }}
+          animate={isInView ? { opacity: 1, y: 0, color: 'transparent', WebkitBackgroundClip: 'text', backgroundClip: 'text', backgroundImage: 'linear-gradient(to right, #4D4D4D, #FFFFFF)' } : { opacity: 0, y: 10, color: '#000000' }}
+          transition={{
+            duration: 1,
+            ease: "easeOut",
+            delay: isInView ? 0.4 : 0, // Delay for the whole heading
+          }}
+          style={{ display: 'inline-block', width: '100%' }} // Span takes full width
+          className="bg-gradient-to-r from-[#4D4D4D] to-[#FFFFFF] text-transparent bg-clip-text"
+        >
+          {headingWords.join(" ")}
+        </motion.span>
       </h1>
 
       <motion.p

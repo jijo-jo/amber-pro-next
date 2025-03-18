@@ -25,9 +25,9 @@ const SmartDashboard: React.FC = () => {
             initial={{ opacity: 0, y: 10, color: '#000000' }}
             animate={isInView ? { opacity: 1, y: 0, color: '#FFFFFF' } : { opacity: 0, y: 10, color: '#000000' }}
             transition={{
-              duration: 0.8,
+              duration: 1,
               ease: "easeOut",
-              delay: isInView ? index * 0.2 : 0,
+              delay: isInView ? index * 0.4 : 0,
             }}
             className="inline-block mr-3"
             >
