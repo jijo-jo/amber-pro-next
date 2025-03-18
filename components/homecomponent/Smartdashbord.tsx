@@ -1,7 +1,8 @@
 'use client';
-import React from 'react';
+import React, { useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { motion, useInView } from 'framer-motion';
 import Iphone1 from '../assests/Home Page.png';
 import Iphone2 from '../assests/Scenes list.png';
 import Iphone3 from '../assests/Master Bedroom.png';
@@ -10,18 +11,34 @@ import Iphone4 from '../assests/RGB Lights.png';
 const images = [Iphone1, Iphone2, Iphone3, Iphone4];
 
 const SmartDashboard: React.FC = () => {
+  const headingWords = 'Control your home, anytime, anywhere.'.split(' ');
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: true });
+
   return (
-    <div className="bg-black text-white min-h-screen flex flex-col px-2 py-12 w-full overflow-hidden">
+    <div ref={sectionRef} className="bg-black text-white min-h-screen flex flex-col px-2 py-12 w-full overflow-hidden">
       <div className="w-full text-left md:mt-16">
-        <h2 className="font-inter font-medium text-[44px] md:text-[64px] leading-[57.2px] tracking-[-2px] align-middle text-center">
-          Control your home, anytime, anywhere.
+        <h2 className="font-inter font-medium text-[44px] md:text-[64px] leading-[57.2px] tracking-[-2px] align-middle pl-7 md:pl-[77px]">
+          {headingWords.map((word, index) => (
+            <motion.span
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{
+                duration: 0.8,
+                ease: 'easeOut',
+                delay: isInView ? index * 0.2 : 0,
+              }}
+            >
+              {word}{' '}
+            </motion.span>
+          ))}
         </h2>
       </div>
 
-      {/* Image Gallery Section */}
-      <div className="relative mt-10 md:mt-20 w-full flex items-center justify-center">
+      <div className="relative mt-14 md:mt-24 flex pl-7 md:pl-[77px]">
         <div
-          className="flex md:grid md:grid-cols-4 gap-10 md:gap-12 md:justify-between overflow-x-auto md:overflow-hidden scroll-smooth no-scrollbar"
+          className="flex flex-row md:gap-10 md:justify-between overflow-x-auto scroll-smooth no-scrollbar"
           style={{
             scrollSnapType: 'x mandatory',
           }}
@@ -35,22 +52,34 @@ const SmartDashboard: React.FC = () => {
               <Image
                 src={src}
                 alt={`Smart Home Dashboard ${index + 1}`}
-                className="w-full h-full rounded-xl shadow-lg object-cover"
+                className="w-[197px] md:w-[385px] h-[408px] md:h-full rounded-xl shadow-lg object-cover"
+                width={415}
+                height={816}
               />
             </div>
           ))}
         </div>
       </div>
-      <div className='flex justify-center'>
-      <DownloadSection />
-      </div> 
+
+      <div className="flex justify-center mt-24">
+        <DownloadSection isInView={isInView} headingWordsLength={headingWords.length} />
+      </div>
     </div>
   );
 };
 
-const DownloadSection: React.FC = () => {
+const DownloadSection: React.FC<{ isInView: boolean, headingWordsLength: number }> = ({ isInView, headingWordsLength }) => {
   return (
-    <div className="text-center text-[#757575] px-6 mt-16 w-[777px] max-w-4xl mx-auto">
+    <motion.div
+      initial={{ opacity: 0, y: 15 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
+      transition={{
+        duration: 1.6,
+        ease: 'easeOut',
+        delay: isInView ? headingWordsLength * 0.2 + 0.2 : 0,
+      }}
+      className="text-center text-[#757575] px-6 mt-16 w-[777px] max-w-4xl mx-auto"
+    >
       <p className="font-inter font-medium text-[21px] leading-[29px] tracking-[-2px] text-center align-middle">
         The Curiousfly App is your ultimate smart home companion, providing seamless control over
         lighting, climate, security, entertainment, and energy management -{' '}
@@ -68,7 +97,7 @@ const DownloadSection: React.FC = () => {
           Download for Android &gt;
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

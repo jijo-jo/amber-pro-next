@@ -1,8 +1,9 @@
-'use client'
-import React, { useState } from "react";
+'use client';
+import React, { useState, useRef } from "react";
 import InputField from "../globalcomponents/InputField";
 import Button from "../globalcomponents/ButtonSubmit";
 import { isValidPhoneNumber } from "libphonenumber-js";
+import { motion, useInView } from "framer-motion";
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -18,7 +19,6 @@ const ContactForm: React.FC = () => {
   });
 
   const [errors, setErrors] = useState<Record<string, string>>({});
-
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -72,14 +72,31 @@ const ContactForm: React.FC = () => {
     }
   };
 
+  const headingWords = "Let’s Connect".split(" ");
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: true });
+
   return (
-    <div className="bg-black text-white px-6 py-12 sm:px-16 lg:px-32">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 md:bg-[#161616] md:rounded-[22px] md:p-14">
+    <div ref={sectionRef} className="bg-black text-white px-6 py-12 sm:px-16 lg:px-32">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-14 md:bg-[#161616] md:rounded-[22px] md:p-14">
         <div>
           <h2
             className="font-inter font-medium text-[44px] leading-[57.2px] tracking-[-2px]"
           >
-            Let’s Connect
+            {headingWords.map((word, index) => (
+              <motion.span
+                key={index}
+                initial={{ opacity: 0, y: 10 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+                transition={{
+                  duration: 0.3,
+                  ease: "easeOut",
+                  delay: isInView ? index * 0.8 : 0,
+                }}
+              >
+                {word}{" "}
+              </motion.span>
+            ))}
           </h2>
 
           <p
