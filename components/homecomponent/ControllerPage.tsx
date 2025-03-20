@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import ProductImage from "../globalcomponents/ProductImage";
@@ -13,8 +13,6 @@ const ControllerPage: React.FC = () => {
 };
 
 const HeroSection: React.FC = () => {
-  const headingWordsLine1 = "Introducing".split(" ");
-  const headingWordsLine2 = "Home Controller".split(" ");
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true });
 
@@ -28,44 +26,16 @@ const HeroSection: React.FC = () => {
         Curiousfly
       </p>
 
-      <h1 className="font-inter font-medium text-[44px] md:text-[64px] leading-[55px] md:leading-[70px] tracking-[-3px] text-center align-middle">
-        {/* First Line Animation */}
-        {headingWordsLine1.map((word, index) => (
-          <motion.span
-            key={index}
-            initial={{ opacity: 0, y: 10, color: "transparent" }}
-            animate={isInView ? { opacity: 1, y: 0, color: "#000000" } : { opacity: 0, y: 10, color: "transparent" }}
-            transition={{
-              duration: 1,
-              ease: "easeOut",
-              delay: isInView ? index * 0.4 : 0,
-            }}
-            className="inline-block mr-3"
-          >
-            {word}{" "}
-          </motion.span>
-        ))}
+      <motion.h1 className="font-inter font-medium text-[44px] md:text-[64px] leading-[1.2] md:leading-[1.3] tracking-[-3px] text-center align-middle"
+        initial={{ opacity: 0, y: 10, color: "transparent" }}
+        animate={isInView ? { opacity: 1, y: 0, color: "#000000" } : { opacity: 0, y: 10, color: "transparent" }}
+        transition={{ duration: 1, ease: "easeOut", delay: isInView ? 0.4 : 0 }}>
+        Introducing
 
-        <br className="leading-relaxed" />
+        <span className="block"></span>
 
-        {/* Second Line Animation (Starts after first line finishes) */}
-        {headingWordsLine2.map((word, index) => (
-          <motion.span
-            key={index}
-            initial={{ opacity: 0, y: 10, color: "transparent" }}
-            animate={isInView ? { opacity: 1, y: 0, color: "#000000" } : { opacity: 0, y: 10, color: "transparent" }}
-            transition={{
-              duration: 1,
-              ease: "easeOut",
-              delay: isInView ? (headingWordsLine1.length * 0.4) + (index * 0.4) : 0,
-            }}
-            className="inline-block mr-3"
-          >
-            {word}{" "}
-          </motion.span>
-        ))}
-      </h1>
-
+        Home Controller
+      </motion.h1>
 
 
       <motion.p
@@ -74,7 +44,7 @@ const HeroSection: React.FC = () => {
         transition={{
           duration: 1.4,
           ease: "easeOut",
-          delay: isInView ? headingWordsLine1.length * 0.2 + headingWordsLine2.length * 0.2 + 0.1 : 0,
+          delay: isInView ? 1.2 : 0,
         }}
         className="font-inter font-medium text-[12px] md:text-[13.89px] leading-[19px] 
              tracking-[0%] text-center align-middle text-[#000000] opacity-50
@@ -89,7 +59,7 @@ const HeroSection: React.FC = () => {
         transition={{
           duration: 1.6,
           ease: "easeOut",
-          delay: isInView ? headingWordsLine1.length * 0.2 + headingWordsLine2.length * 0.2 + 0.2 : 0,
+          delay: isInView ? 1.4 : 0,
         }}
         className="mt-6"
       >

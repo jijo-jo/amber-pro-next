@@ -11,30 +11,23 @@ import Iphone4 from '../assests/RGB Lights.png';
 const images = [Iphone1, Iphone2, Iphone3, Iphone4];
 
 const SmartDashboard: React.FC = () => {
-  const headingWords = 'Control your home, anytime, anywhere.'.split(' ');
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true });
 
   return (
     <div ref={sectionRef} className="bg-black text-white min-h-screen flex flex-col px-2 py-12 w-full overflow-hidden">
       <div className="w-full text-left md:mt-16">
-        <h2 className="font-inter font-medium text-[44px] md:text-[64px] leading-[57.2px] tracking-[-2px] align-middle pl-7 md:pl-[77px]">
-          {headingWords.map((word, index) => (
-            <motion.span
-            key={index}
-            initial={{ opacity: 0, y: 10, color: '#000000' }}
-            animate={isInView ? { opacity: 1, y: 0, color: '#FFFFFF' } : { opacity: 0, y: 10, color: '#000000' }}
-            transition={{
-              duration: 1,
-              ease: "easeOut",
-              delay: isInView ? index * 0.4 : 0,
-            }}
-            className="inline-block mr-3"
-            >
-              {word}
-            </motion.span>
-          ))}
-        </h2>
+        <motion.h2 className="font-inter font-medium text-[44px] md:text-[64px] leading-[57.2px] tracking-[-2px] align-middle pl-7 md:pl-[77px]"
+          initial={{ opacity: 0, y: 10, color: '#000000' }}
+          animate={isInView ? { opacity: 1, y: 0, color: '#FFFFFF' } : { opacity: 0, y: 10, color: '#000000' }}
+          transition={{
+            duration: 1,
+            ease: "easeOut",
+            delay: isInView ? 0.4 : 0,
+          }}
+        >
+          Control your home, anytime, anywhere.
+        </motion.h2>
       </div>
 
       <div className="relative mt-14 md:mt-24 flex pl-7 md:pl-[77px]">
@@ -42,6 +35,8 @@ const SmartDashboard: React.FC = () => {
           className="flex flex-row gap-4 md:gap-10 md:justify-between overflow-x-auto scroll-smooth no-scrollbar"
           style={{
             scrollSnapType: 'x mandatory',
+            WebkitOverflowScrolling: "touch",
+            scrollbarWidth: "none", 
           }}
         >
           {images.map((src, index) => (
@@ -63,22 +58,15 @@ const SmartDashboard: React.FC = () => {
       </div>
 
       <div className="flex justify-center md:mt-20">
-        <DownloadSection isInView={isInView} headingWordsLength={headingWords.length} />
+        <DownloadSection />
       </div>
     </div>
   );
 };
 
-const DownloadSection: React.FC<{ isInView: boolean, headingWordsLength: number }> = ({ isInView, headingWordsLength }) => {
+const DownloadSection: React.FC = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 15 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
-      transition={{
-        duration: 1.6,
-        ease: 'easeOut',
-        delay: isInView ? headingWordsLength * 0.2 + 0.2 : 0,
-      }}
+    <div
       className="text-center text-[#757575] px-6 mt-16 w-[777px] max-w-4xl mx-auto"
     >
       <p className="font-inter font-medium text-[21px] leading-[29px] tracking-[-2px] text-center align-middle">
@@ -98,7 +86,7 @@ const DownloadSection: React.FC<{ isInView: boolean, headingWordsLength: number 
           Download for Android &gt;
         </Link>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
