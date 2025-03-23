@@ -7,12 +7,15 @@ import Button from "../globalcomponents/Button";
 import hamburgimage from '../assests/Group 4.png'
 import closeimage from '../assests/Group 6.png'
 
-const Navbar: React.FC = () => {
+interface NavbarProps{
+  textcolor?:string
+}
+
+const Navbar: React.FC<NavbarProps> = ({textcolor}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
-      {/* Overlay for popup background effect */}
       {isOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-50 z-40 transition-opacity duration-300"
@@ -20,17 +23,17 @@ const Navbar: React.FC = () => {
         />
       )}
 
-      <nav className="bg-black text-white p-4 fixed top-0 left-0 w-full z-50">
+      <nav className="bg-transparent text-white p-4 fixed top-0 left-0 w-full z-50">
         <div className="flex justify-between items-center mx-2 md:mx-4 lg:mx-10">
           <div className="text-lg font-bold">
             <Image src={Logo} alt="Logo" className="h-[26px] w-[25px]" />
           </div>
 
           <div className="hidden md:flex flex-1 justify-center space-x-4 gap-12 ml-20 ">
-            <NavLink label="Amber Pro" href="#" />
-            <NavLink label="Curiousfly Home" href="#" />
-            <NavLink label="Home Controller" href="#" />
-            <NavLink label="Curiousfly App" href="#" />
+            <NavLink label="Amber Pro" href="#" className={`${textcolor?textcolor:""}`} />
+            <NavLink label="Curiousfly Home" href="#" className={`${textcolor?textcolor:""}`} />
+            <NavLink label="Home Controller" href="#" className={`${textcolor?textcolor:""}`} />
+            <NavLink label="Curiousfly App" href="#" className={`${textcolor?textcolor:""}`} />
           </div>
 
           <div className="hidden md:block">
