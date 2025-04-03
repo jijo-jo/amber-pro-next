@@ -48,7 +48,7 @@ export default function Home() {
     <Navbar textcolor="text-white"/>
     <main className="flex flex-col items-center justify-center">
        <HeroSectionLight/>
-       <div className="bg-black min-h-screen px-6 md:px-16 py-16">
+    <div className="bg-black min-h-screen px-6 md:px-16">
       {features.map((feature, index) => (
         <FeatureSection key={index} {...feature} />
       ))}

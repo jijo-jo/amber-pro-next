@@ -5,11 +5,11 @@ import philiplogo from "../assests/philipslogo.png"
 const CuriouslySupports: React.FC = () => {
   return (
     <section className="bg-black text-white text-center py-16 px-6">
-      <h2 className="font-inter text-2xl md:text-[44px] font-medium mb-8 leading-[57.2px] tracking-[-2px]">
+      <h2 className="font-inter text-[36px] md:text-[44px] font-medium mb-8 leading-[57.2px] tracking-[-2px]">
           Curiousfly supports
       </h2>
 
-      <p className="text-[#757575] max-w-[844.98px] font-inter mx-auto text-sm md:text-[21px] leading-[29px] tracking-[-2px]">
+      <p className="text-[#757575] max-w-[844.98px] font-inter mx-auto text-[21px] md:text-[21px] leading-[29px] tracking-[-2px]">
       Curiousfly’s tunable lights are compatible with DALI (Digital Addressable Lighting Interface), ensuring precise dimming and automation in high-end residential and commercial projects. Additionally, we support Philips Hue, allowing you to integrate with your existing smart lighting ecosystem for an effortless experience.
       </p>
 

@@ -1,13 +1,13 @@
 import Image from "next/image";
-import switchlogo from "../assests/instantprecisson.png"
+import switchlogo from "../assests/2_Black_black_Final_2.png"
 
 const AmberPro: React.FC = () => {
   return (
-    <section className="bg-black text-white flex flex-col md:flex-row items-center justify-center px-6 md:px-16 py-16 gap-10">
-      {/* Left Image */}
+    <section className="bg-black text-white flex flex-col-reverse md:flex-row items-center justify-center px-6 md:px-16 py-16 gap-10 md:gap-32 md:my-16">
+   
       <div className="flex-shrink-0">
         <Image
-          src={switchlogo} // Replace with actual image path
+          src={switchlogo} 
           alt="Amber Pro Switch"
           width={568.91}
           height={558.62}
@@ -15,7 +15,6 @@ const AmberPro: React.FC = () => {
         />
       </div>
 
-      {/* Right Content */}
       <div className="text-center md:text-left max-w-md">
         <p className="font-inter font-medium text-[16px] text-[#FFFFFF] leading-[19.2px] tracking-[1.92px] uppercase mb-2">
            AMBER PRO

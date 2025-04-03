@@ -23,14 +23,14 @@ const HeroSectionLight: React.FC = () => {
             </div>
             <section
                 ref={sectionRef}
-                className="relative flex flex-col items-center justify-center min-h-screen text-white text-center px-6 py-12 pb-24 mt-8 overflow-hidden"
+                className="relative flex flex-col items-center justify-end md:justify-center min-h-screen text-white text-center px-6 py-12 pb-24 mt-8 overflow-hidden"
             >
 
                 <motion.h1
                     initial={{ opacity: 0, y: 20, scale: 0.95 }}
                     animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
                     transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
-                    className="text-[36px] md:text-[44px] font-medium leading-[57.2px] tracking-[-2px] text-white relative z-10"
+                    className="text-[36px] md:text-[44px] font-medium leading-[47px] md:leading-[57.2px] tracking-[-2px] text-white relative z-10 w-[263px] md:w-[739.42px]"
                 >
                     Lighting isn’t just about brightness
                 </motion.h1>
