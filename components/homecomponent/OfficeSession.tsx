@@ -27,11 +27,11 @@ const OfficeSession: React.FC<HeroProps> = ({
           alt="Background"
           layout="fill"
           objectFit="cover"
-          className="absolute inset-0 z-0"
+          className="absolute opacity-75 inset-0 z-0"
           priority
         />
         <div className="absolute top-8 left-4 lg:top-auto lg:left-auto lg:bottom-32 lg:right-[162px] max-w-md p-4 sm:p-8 text-left ">
-          <motion.h1 className="font-inter font-medium text-[36px] md:text-[44px] leading-[57.2px] tracking-[0%]"
+          <motion.h1 className="font-inter text-[#FFFFFF] font-medium text-[36px] md:text-[44px] leading-[57.2px] tracking-[-2px]"
                initial={{ opacity: 0, y: 20 }}
                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                transition={{
@@ -44,13 +44,13 @@ const OfficeSession: React.FC<HeroProps> = ({
 
           <motion.p
             initial={{ opacity: 0, y: 15 }}
-            animate={isInView ? { opacity: 0.5, y: 0 } : { opacity: 0, y: 15 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
             transition={{
               duration: 1.4,
               ease: "easeOut",
               delay: isInView ? 0.6 : 0,
             }}
-            className="font-inter font-medium w-[315.48px] md:w-[450.19px] text-[12px] md:text-[13.89px] leading-[19px] tracking-[0%] text-[#000000] opacity-50 my-2"
+            className="font-inter font-medium w-[315.48px] md:w-[450.19px] text-[12px] md:text-[13.89px] leading-[19px] tracking-[0%] text-[#FFFFFF] my-2"
           >
             {description}
           </motion.p>
@@ -64,7 +64,7 @@ const OfficeSession: React.FC<HeroProps> = ({
             }}
             className="mt-4 flex justify-start"
           >
-            <button className="bg-black w-auto text-white px-6 py-2 rounded-full text-center font-inter font-medium text-[15.88px] md:text-[15.88px] hover:bg-gray-800 transition">
+            <button className="bg-white w-auto text-black px-6 py-2 rounded-full text-center font-inter font-medium text-[15.88px] md:text-[15.88px] hover:bg-gray-800 transition">
               {buttonText}
             </button>
           </motion.div>

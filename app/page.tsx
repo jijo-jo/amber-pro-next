@@ -4,7 +4,7 @@ import ContactForm from "@/components/homecomponent/ContactForm";
 import OfficeSession from "@/components/homecomponent/OfficeSession";
 import SmartDashboard from "@/components/homecomponent/Smartdashbord";
 import ControllerPage from "@/components/homecomponent/ControllerPage";
-import officeImage from "@/components/assests/officeimage.jpeg"
+import officeImage from "@/components/assests/createbg.jpeg"
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
         <HeroSection />
         <OfficeSession
             title="Curiousfly Home"
-            description="A Curiousfly Home is a seamlessly automated living space designed for ultimate comfort, convenience, and efficiency. Every element is crafted to provide a luxurious and intuitive living experience, making your home smarter, safer, and more efficient."
+            description="A Curiousfly Home is a seamlessly automated living space designed for ultimate comfort, convenience, and efficiency."
             buttonText="Explore"
             backgroundImage={officeImage}
         />
