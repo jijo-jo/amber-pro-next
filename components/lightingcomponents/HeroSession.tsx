@@ -1,69 +1,33 @@
 'use client';
-import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
-import Button from "../globalcomponents/Button";
-import Image from "next/image";
-import backgroundImage from "../assests/lightingbg.jpeg";
 
-const HeroSectionLight: React.FC = () => {
-    const sectionRef = useRef(null);
-    const isInView = useInView(sectionRef, { margin: "-50% 0px -50% 0px", once: true });
+import Image from 'next/image';
+import bgsettingimage from "../assests/bgsettingimage.png"
 
-    return (
-        <>
-            <div className="absolute inset-0 w-full h-full opacity-50">
-                <Image
-                    src={backgroundImage}
-                    alt="Background"
-                    layout="fill"
-                    objectFit="cover"
-                    className="w-full h-full "
-                    priority
-                />
-            </div>
-            <section
-                ref={sectionRef}
-                className="relative flex flex-col items-center justify-end md:justify-center min-h-screen text-white text-center px-6 py-12 pb-24 mt-8 overflow-hidden"
-            >
+const Hero = () => {
+  return (
+    <section className="relative h-[100vh] w-full overflow-hidden flex items-center justify-center">
+  
+      <Image
+        src={bgsettingimage} 
+        alt="Elegant Blinds"
+        fill
+        priority
+        className="object-cover z-0"
+      />
 
-                <motion.h1
-                    initial={{ opacity: 0, y: 20, scale: 0.95 }}
-                    animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
-                    transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
-                    className="text-[36px] md:text-[44px] font-medium leading-[47px] md:leading-[57.2px] tracking-[-2px] text-white relative z-10 w-[263px] md:w-[739.42px]"
-                >
-                    Lighting isn’t just about brightness
-                </motion.h1>
+      <div className="absolute inset-0 bg-black/40 z-10" />
 
-                {/* Subtext */}
-                <motion.p
-                    initial={{ opacity: 0, y: 15 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 1.2, ease: "easeOut", delay: 0.6 }}
-                    className="text-[#FFFFFFAA] w-[345px] md:w-[638.24px] mt-4 text-[12px] md:text-[13.89px] leading-[18.2px] tracking-[0%] relative z-10"
-                >
-                    It’s about creating the perfect ambiance, enhancing comfort, and improving energy efficiency.
-                </motion.p>
-
-                {/* Button */}
-                <motion.div
-                    initial={{ opacity: 0, y: 15 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 1.4, ease: "easeOut", delay: 0.8 }}
-                    className="mt-6 flex flex-col sm:flex-col space-y-4 sm:space-y-0 sm:space-x-4 max-w-xs sm:max-w-none ml-0 md:ml-8 relative z-10"
-                >
-                    <Button
-                        title="Explore"
-                        onClick={() => alert("Explore Clicked")}
-                        className="bg-transparent text-[#FFFFFF] py-[9px] px-[18px] w-full md:w-[112.5px]
-             text-[15.88px] leading-[100%] tracking-[0%] h-[42px]
-             text-center align-middle font-inter font-medium ml-2 border border-white"
-                    />
-                </motion.div>
-            </section>
-        </>
-    );
+      <div className="relative z-20 text-center px-4 md:px-0">
+        <p className="uppercase text-[16px] text-white font-medium leading-[19.2px] tracking-[1.92px] mb-2">BLINDS AND SHADES</p>
+        <h1 className="text-[36px] md:text-[64px] font-medium text-white leading-[44px] md:leading-[66px] tracking-[-2px] md:tracking-[-3px]">
+          Effortless elegance, <br className="hidden sm:block" />
+          one glide at a time
+        </h1>
+      </div>
+    </section>
+  );
 };
 
-export default HeroSectionLight;
+export default Hero;
+
 

@@ -21,13 +21,13 @@ const OfficeSession: React.FC<HeroProps> = ({
 
   return (
     <>
-      <section ref={sectionRef} className="relative w-full h-screen flex items-start justify-start text-black bg-white">
+      <section ref={sectionRef} className="relative w-full h-screen flex items-start justify-start text-black">
         <Image
           src={backgroundImage}
           alt="Background"
           layout="fill"
           objectFit="cover"
-          className="absolute opacity-75 inset-0 z-0"
+          className="absolute opacity-[73%] inset-0 z-0"
           priority
         />
         <div className="absolute top-8 left-4 lg:top-auto lg:left-auto lg:bottom-32 lg:right-[162px] max-w-md p-4 sm:p-8 text-left ">

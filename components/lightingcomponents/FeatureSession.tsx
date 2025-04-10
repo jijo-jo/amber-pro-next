@@ -1,37 +1,38 @@
-import Image from "next/image";
+'use client';
 
-interface FeatureProps {
-  image: string;
-  heading1: string;
-  description1: string;
-  heading2: string;
-  description2: string;
-  reverse?: boolean;
-}
+import Image from 'next/image';
+import userimage from "../assests/userimage.jpeg"
 
-const FeatureSection: React.FC<FeatureProps> = ({
-  image,
-  heading1,
-  description1,
-  heading2,
-  description2,
-  reverse,
-}) => {
+const CircadianLighting = () => {
   return (
-    <div className={`flex flex-col ${reverse ? "md:flex-row-reverse" : "md:flex-row"} items-center gap-16 md:gap-32 py-16`}>
-      <div className="w-[250px] md:w-[300px] lg:w-[350px] flex-shrink-0">
-        <Image src={image} alt={heading1} width={500} height={800} className="rounded-xl shadow-lg" />
-      </div>
+    <section className="w-full bg-white py-12 md:py-20 px-4 md:px-8">
+      <div className="max-w-5xl mx-auto text-center">
+        <h2 className="text-[36px] md:text-[64px] font-medium leading-[44px] md:leading-[79px] tracking-[-2px] md:tracking-[-3px] text-black mb-2">
+          Circadian Lighting
+        </h2>
+        <p className="text-[36px] md:text-[64px] leading-[44px] md:leading-[79px] tracking-[-2px] md:tracking-[-3px] font-medium mb-6">
+          <span className="text-[#0B84F8] mr-1">Wellness </span>
+          <span className="text-[#EB8112] mr-1">Through</span>
+          <span className="text-[#0B84F8] ml-1">Light</span>
+        </p>
 
-      <div className="max-w-[340px] text-left">
-        <div className="text-[32px] md:text-[32px] font-inter font-medium text-white leading-[38.4px] tracking-[-0.64px] max-w-[329.26px]">{heading1}</div>
-        <p className="text-[#FFFFFF66] font-inter fornt-[400] text-[21px] md:text-[21px] leading-[29px] tracking-[-0.8px] mt-6 mb-8 md:mb-20 ">{description1}</p>
+        <div className="w-full relative aspect-[4/5] md:aspect-[1.25/1] rounded-xl overflow-hidden mb-6">
+          <Image
+            src={userimage}
+            alt="Woman with Circadian Lighting"
+            className="w-full h-full object-cover"
+          />
+        </div>
 
-        <div className="text-[32px] md:text-[32px] font-inter font-medium text-white leading-[38.4px] tracking-[-0.64px] max-w-[329.26px]">{heading2}</div>
-        <p className="text-[#FFFFFF66] font-inter fornt-[400] text-[21px] md:text-[21px] leading-[29px] tracking-[-0.8px] mt-6">{description2}</p>
+
+        <p className="text-[16px] md:text-[20px] text-[#757575] leading-[22px] md:leading-[29px] max-w-3xl font-[600] mx-auto w-[323px] md:w-[779.50px]">
+          Your body follows a natural circadian rhythm, responding to light and darkness to regulate sleep, energy, and overall well-being. With<span className='text-[16px] md:text-[20px] text-[#000000] leading-[22px] md:leading-[29px] max-w-3xl font-[600] mx-auto ml-2'>Curiousfly’s Circadian Lighting</span>
+          , your home adapts to this rhythm—helping you wake up refreshed, stay productive during the day, and unwind naturally at night.
+        </p>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default FeatureSection;
+export default CircadianLighting;
+

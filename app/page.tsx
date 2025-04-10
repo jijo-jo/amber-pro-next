@@ -20,7 +20,10 @@ export default function Home() {
         />
         <ControllerPage/>
         <SmartDashboard/>
+        <div className="mt-32">
         <ContactForm />
+        </div>
+      
         
     </main>
 </div>

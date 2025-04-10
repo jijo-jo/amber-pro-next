@@ -9,8 +9,8 @@ const AmberPro: React.FC = () => {
         <Image
           src={switchlogo} 
           alt="Amber Pro Switch"
-          width={568.91}
-          height={558.62}
+          width={500}
+          height={500}
           className=""
         />
       </div>
