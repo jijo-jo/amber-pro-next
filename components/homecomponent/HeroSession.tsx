@@ -50,9 +50,9 @@ const HeroSection: React.FC = () => {
           transition={{ duration: 1.6, ease: "easeOut", delay: isInView ? 0.3 : 0 }}
         >
           <Button
-            title="Buy now"
+            title="Learn More"
             onClick={() => alert("Buy Now Clicked")}
-            className="bg-white text-[#000000] py-[9px] px-[18px] hover:bg-gray-200 w-full md:w-[112.5px]
+            className="bg-white text-[#000000] py-[9px] px-[18px] hover:bg-transparent hover:text-white hover:border-white hover:border-[1px] w-full md:w-full
                text-[15.88px] leading-[100%] tracking-[0%] h-[42px]
                text-center align-middle font-inter font-medium ml-2"
           />

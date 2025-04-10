@@ -27,10 +27,10 @@ const OfficeSession: React.FC<HeroProps> = ({
           alt="Background"
           layout="fill"
           objectFit="cover"
-          className="absolute opacity-[73%] inset-0 z-0"
+          className="absolute opacity-[73%] md:opacity-100 inset-0 z-0"
           priority
         />
-        <div className="absolute top-8 left-4 lg:top-auto lg:left-auto lg:bottom-32 lg:right-[162px] max-w-md p-4 sm:p-8 text-left ">
+        <div className="absolute top-8 left-4 lg:top-auto lg:left-auto lg:bottom-60 lg:right-[170px] max-w-md p-4 sm:p-8 text-left ">
           <motion.h1 className="font-inter text-[#FFFFFF] font-medium text-[36px] md:text-[44px] leading-[57.2px] tracking-[-2px]"
                initial={{ opacity: 0, y: 20 }}
                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}

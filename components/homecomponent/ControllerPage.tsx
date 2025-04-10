@@ -26,7 +26,7 @@ const HeroSection: React.FC = () => {
         Curiousfly
       </p>
 
-      <motion.h1 className="font-inter font-medium text-[44px] md:text-[64px] leading-[1.2] md:leading-[1.3] tracking-[-3px] text-center align-middle"
+      <motion.h1 className="font-inter font-medium text-[44px] md:text-[64px] leading-[55px] md:leading-[70px] tracking-[-2px] text-center align-middle"
         initial={{ opacity: 0, y: 10, color: "transparent" }}
         animate={isInView ? { opacity: 1, y: 0, color: "#000000" } : { opacity: 0, y: 10, color: "transparent" }}
         transition={{ duration: 1, ease: "easeOut", delay: isInView ? 0.4 : 0 }}>
@@ -48,7 +48,7 @@ const HeroSection: React.FC = () => {
         }}
         className="font-inter font-medium text-[12px] md:text-[13.89px] leading-[19px] 
              tracking-[0%] text-center align-middle text-[#000000] opacity-50
-             w-[345px] md:w-[481.29px] mx-auto mt-4"
+             w-[345px] md:w-[481.29px] mx-auto mt-8"
       >
         The central intelligence of your smart home, seamlessly integrating and managing all connected devices for a smooth automation experience.
       </motion.p>
