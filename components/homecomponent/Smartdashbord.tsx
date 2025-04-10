@@ -13,7 +13,7 @@ const SmartDashboard: React.FC = () => {
       <span className="block w-full bg-black h-12"></span>
       <div
         ref={sectionRef}
-        className="relative bg-black text-white min-h-[120vh] flex-col w-full"
+        className="relative bg-black text-white min-h-[120vh] flex-col w-full mt-0 md:mt-14"
       >
         <Image
           src={scrollerchnage}
@@ -57,7 +57,7 @@ const SmartDashboard: React.FC = () => {
         </div>
 
 
-        <div className="flex justify-center z-10 absolute -bottom-12 md:-bottom-12 inset-x-0">
+        <div className="flex justify-center z-10 absolute -bottom-12 md:-bottom-20 inset-x-0">
           <DownloadSection />
         </div>
       </div>

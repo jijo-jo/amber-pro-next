@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import lightingtop from "../assests/lighting-top.jpeg"
-import lightingphone from "../assests/lightingphone.png"
+import lightingphone from "../assests/iPhone 12 Pro.png"
 
 const LightingAndShades = () => {
   return (
@@ -27,14 +27,14 @@ const LightingAndShades = () => {
       </div>
 
       <div className="max-w-6xl mx-auto px-4 py-12 md:py-20 text-center mt-10">
-        <div className="relative w-full max-w-3xl mx-auto h-auto aspect-[9/16] md:aspect-[16/9] mb-8">
+        <div className="relative w-full max-w-3xl mx-auto h-auto  aspect-[1.5/1] md:aspect-[2/1] mb-16 mt-16 md:mt-8">
           <Image
             src={lightingphone}
             alt="Smartphone RGB Controls"
             className="object-cover w-full h-full"
           />
         </div>
-        <p className="text-[16px] md:text-[20px] text-[#757575] w-[327.36px] md:w-[771.55px] mx-auto leading-[22px] md:leading-[29px] font-[600]">
+        <p className="text-[16px] md:text-[20px] text-[#757575] w-[327.36px] md:w-[771.55px] mx-auto leading-[22px] md:leading-[29px] font-[600] mb-16">
           Control your lights with ease, Whether through our mobile app, touch panels, or voice commands. Enjoy instant adjustments without leaving your seat. Why settle for ordinary lighting when you can
           <span className="text-[16px] md:text-[20px] text-[#FFFFFF] ml-1 leading-[22px] md:leading-[29px] font-[600]">transform your space with RGB Smart Lights</span>
           ? create stunning ambiances, enhance moods, and personalize your home like never before.

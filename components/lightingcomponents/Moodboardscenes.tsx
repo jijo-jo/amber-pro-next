@@ -6,17 +6,17 @@ import phoneImage from "../assests/image (5) (1).png"
 
 const MoodScene = () => {
   return (
-    <section className="w-full bg-black py-12 md:py-20 px-4 md:px-12">
+    <section className="w-full bg-black py-12 md:py-20 px-4 md:px-12 mt-10 ">
       <div className="flex flex-col justify-center max-w-7xl mx-auto text-center text-white mb-12">
         <h2 className="text-[36px] md:text-[64px] font-medium leading-[44px] md:leading-[96px] tracking-[-2px] md:tracking-[-3px] mb-4 text-[#FFFFFF]">
           Mood-Based Ambiance and scenes
-        </h2>
+        </h2> 
         <p className="text-sm md:text-[13.89px] font-[400] leading-[26px] tracking-[-0.8px] text-[#FFFFFFC2] w-[345px] md:w-[634.62px] mx-auto">
           Set the tone for every moment. From a relaxing evening to a vibrant celebration, create the perfect atmosphere with customizable lighting scenes.
         </p>
       </div>
 
-      <div className="flex flex-col-reverse md:flex-row items-center justify-center gap-10">
+      <div className="flex flex-col-reverse md:flex-row items-center justify-center gap-10 my-8">
         <div className="relative w-[260px] sm:w-[280px] md:w-[300px] h-[600px]">
           <Image
             src={phoneImage}
