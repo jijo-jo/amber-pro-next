@@ -81,8 +81,8 @@ const Navbar: React.FC<NavbarProps> = ({textcolor}) => {
             <NavLink label="Home Controller" href="#" className="font-inter text-[24px] text-white font-medium leading-[32px] tracking-[-2px]" />
             <NavLink label="Curiousfly App" href="#" className="font-inter text-[24px] text-white font-medium leading-[32px] tracking-[-2px]" />
             <NavLink label="Lighting" href="/lighting" className="font-inter text-[24px] text-white font-medium leading-[32px] tracking-[-2px]" />
-            <NavLink label="Music" href="#" className="font-inter text-[24px] text-white font-medium leading-[32px] tracking-[-2px]" />
-            <NavLink label="Security" href="#" className="font-inter text-[24px] text-white font-medium leading-[32px] tracking-[-2px]" />
+            <NavLink label="Music" href="/music" className="font-inter text-[24px] text-white font-medium leading-[32px] tracking-[-2px]" />
+            <NavLink label="Security" href="/security" className="font-inter text-[24px] text-white font-medium leading-[32px] tracking-[-2px]" />
             <NavLink label="Climate" href="#" className="font-inter text-[24px] text-white font-medium leading-[32px] tracking-[-2px]" />
             <NavLink label="Blog" href="#" className="text-[#FFFFFF] opacity-60 text-[20px] font-[200] leading-[28px] tracking-[-2px]" />
             <NavLink label="Contact" href="#" className="text-[#FFFFFF] opacity-60 text-[20px] font-[200] leading-[28px] tracking-[-2px]" />
