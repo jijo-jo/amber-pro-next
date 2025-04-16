@@ -1,8 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import iphoneframe from "../assests/securityiphoneframe.png"
-import backgroundsec from "../assests/securitybackground.png"
+import iphoneframe from "../assests/survilace.png"
 import lockwhite from "../assests/lockwhite.svg"
 
 const SurveillancePreview = () => {
@@ -26,23 +25,11 @@ const SurveillancePreview = () => {
 
             <div className="relative w-[350px] h-[200px] md:w-[600px] md:h-[340px]">
                 <Image
-                    src={backgroundsec}
-                    alt="Room background"
-                    fill
-                    className="object-cover rounded-lg"
-                />
-                <Image
                     src={iphoneframe}
                     alt="iPhone frame"
                     fill
                     className="object-contain pointer-events-none"
                 />
-                <div className="absolute inset-0 flex items-center justify-center">
-                    <h2 className="text-2xl md:text-4xl font-bold">Surveillance</h2>
-                </div>
-                <div className="absolute bottom-4 right-4 text-sm text-white">
-                    01-01-2025 &nbsp; Fri &nbsp; 11:31:25
-                </div>
             </div>
 
             <p className="max-w-[327.36px] md:max-w-[809.99px] text-center text-[16px] md:text-[20px] leading-[22px] md:leading-[29px] font-[600] text-[#757575] mt-16">

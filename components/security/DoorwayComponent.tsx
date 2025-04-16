@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import doorstepImage from "../assests/doorstepImage.png"
+import doorstepImage from "../assests/doorstepnew.png"
 
 
 const DoorViewComponent: React.FC = () => {
@@ -13,7 +13,7 @@ const DoorViewComponent: React.FC = () => {
       </div>
 
       <div className="relative mt-10 flex justify-center items-center">
-          <Image src={doorstepImage} alt="Phone 1" width={1080} height={1080} />
+          <Image src={doorstepImage} alt="Phone 1" width={900} height={900} />
       </div>
     </div>
   );
